@@ -1,14 +1,23 @@
 package observer;
 
-import java.util.Observable;
-import java.util.Observer;
+public class Enterprise implements PublishListener{
 
-public class Enterprise implements Observer{
-
-	@Override
-	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
-		
+	String nombre;
+	
+	public Enterprise(String nombre) {
+		super();
+		this.nombre = nombre;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	@Override
+	public void getRelease(Publication p) {
+		System.out.println(getNombre() + " ha recibido: " + p.toString());	}
 }

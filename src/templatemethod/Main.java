@@ -9,5 +9,4 @@ public class Main {
 		Pasta p = new Tallarines();
 		p.preparar();
 	}
-
 }
